@@ -1,0 +1,34 @@
+<ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col class="textLogin">
+                <p>IONIC LOGIN APP</p>
+            </ion-col>
+        </ion-row>
+
+        <form [formGroup]="formUser" (ngSubmit)="loginUser()">
+
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label [ngClass]="{'invalidInput': this.formUser.get('nameUser').invalid, 'exitInput': this.formUser.get('nameUser').valid}" position="stacked">Usuario</ion-label>
+                        <ion-input required="true" type="text" formControlName="nameUser" ngDefaultControl></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label [ngClass]="{'invalidInput': this.formUser.get('password').invalid , 'exitInput': this.formUser.get('password').valid}" position="stacked">Contraseña</ion-label>
+                        <ion-input type="password" formControlName="password" ngDefaultControl></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-button [disabled]="formUser.invalid" class="btnLogin" color="success" expand="block" type="submit">Inicar Sesion</ion-button>
+        </form>
+
+    </ion-grid>
+
+</ion-content>

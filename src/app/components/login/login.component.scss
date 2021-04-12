@@ -1,0 +1,29 @@
+div {
+    background: #1b577b;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1b577b 0%, #341a4a 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1b577b 0%, #341a4a 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1b577b 0%, #341a4a 100%);
+}
+
+.textLogin {
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 25%;
+}
+
+.btnLogin {
+    margin-top: 20px;
+}
+
+.invalidInput {
+    color: red;
+}
+
+.exitInput {
+    color: green;
+}

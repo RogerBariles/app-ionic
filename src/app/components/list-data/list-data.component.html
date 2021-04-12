@@ -1,0 +1,37 @@
+<ion-content [scrollEvents]="true">
+
+    <div style="scroll-behavior: auto;">
+        <h3>Listado de datos</h3>
+        Obteniendo datos de: {{contacto}}
+    </div>
+
+    <div *ngIf="!load" class="ion-justify-content-start">
+        <ion-spinner color="orange" name="crescent"></ion-spinner>
+    </div>
+
+    <div *ngIf="load">
+        <ion-item class="inputs">
+            <ion-label position="stacked">Filtro por booking Id</ion-label>
+            <ion-input type="text" (ionInput)="changeId($event.target.value)"></ion-input>
+        </ion-item>
+        <ion-item class="inputs">
+            <ion-label position="stacked">Filtro por Precio</ion-label>
+            <ion-input type="text" (ionInput)="changePrecio($event.target.value)"></ion-input>
+        </ion-item>
+    </div>
+
+
+    <div class="containerTable thumnails" *ngIf="load">
+        <ion-row class="list-thumbnail">
+            <ngx-datatable scrollX="true" [rows]="rows" [rowHeight]="'auto'">
+                <ngx-datatable-column name="bookingId"></ngx-datatable-column>
+                <ngx-datatable-column name="Cliente"></ngx-datatable-column>
+                <ngx-datatable-column name="fechaDeCreacion"></ngx-datatable-column>
+                <ngx-datatable-column name="Direccion"></ngx-datatable-column>
+                <ngx-datatable-column name="Precio"></ngx-datatable-column>
+            </ngx-datatable>
+        </ion-row>
+    </div>
+
+
+</ion-content>
