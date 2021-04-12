@@ -10,7 +10,7 @@
 
 # LEVANTAR PROYECTO
 clonar repositorio:
-    - git clone 
+    - git clone https://github.com/RogerBariles/app-ionic.git
 
 tener instalado ionic, de lo contrario correr:
     - npm install -g @ionic/cli
@@ -24,7 +24,8 @@ levantar proyecto:
 
 # ESTRUCTURA DEL PROYECYO
 
- Directorio:
+<pre>
+ Directorio: 
     app/
     |
     |-- components/     los componentes principales de la funcionalidad de la aplicacion
@@ -37,3 +38,4 @@ levantar proyecto:
     |
     |- services/  aqui se encontrara los servicios que realizan las peticiones Http y un interceptor
 
+</pre>
